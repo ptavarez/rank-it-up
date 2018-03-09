@@ -16,10 +16,12 @@
 
       <h1>Rank It Up</h1>
 
-      <!-- Auth Section =================================================================================================-->
+      <!-- Landing Section =================================================================================================-->
+
+      <div class="userAuth"> <!-- userAuth -->
 
       <!-- Sign-up trigger modal ............................................-->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUp">
+      <button type="button" class="signUpButton btn btn-primary" data-toggle="modal" data-target="#signUp">
         Sign Up
       </button>
 
@@ -60,7 +62,7 @@
       </div> <!-- /Sign-up Modal -->
 
       <!-- Sign-in trigger modal ............................................-->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signIn">
+      <button type="button" class="signInButton btn btn-primary" data-toggle="modal" data-target="#signIn">
         Sign In
       </button>
 
@@ -95,6 +97,11 @@
         </div>
       </div> <!-- /Sign-in Modal -->
 
+    </div> <!-- /userAuth -->
+
+      <!-- User Section =================================================================================================-->
+
+      <div class="userMain" hidden> <!-- userMain -->
       <!-- Sign-in trigger modal ............................................-->
       <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#changePassword">
         Change Password
@@ -137,6 +144,8 @@
           <input type="submit" value="Sign Out" class="btn btn-primary">
         </fieldset>
       </form> <!--/Sign-out Button -->
+
+    </div> <!-- /userMain -->
 
     </body>
 
