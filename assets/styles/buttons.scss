@@ -1,0 +1,69 @@
+.signInButton {
+  @include breakpoint('large') {
+    height: 50px;
+    left: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
+  @include breakpoint('medium') {
+    height: 50px;
+    left: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
+  @include breakpoint('small') {
+    height: 50px;
+    left: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
+  @include breakpoint('tiny') {
+    left: 35%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+
+
+
+.signUpButton {
+  @include breakpoint('large') {
+    height: 50px;
+    left: 60%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
+  @include breakpoint('medium') {
+    height: 50px;
+    left: 60%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
+  @include breakpoint('small') {
+    height: 50px;
+    left: 60%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
+  @include breakpoint('tiny') {
+    left: 65%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+}
