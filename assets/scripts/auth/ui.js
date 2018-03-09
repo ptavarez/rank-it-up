@@ -53,6 +53,8 @@ const signUpFailure = function () {
 const signInSuccess = function (data) {
   store.user = data.user
   $('#signIn').modal('hide')
+  $('.landing').hide()
+  $('.userMain').show()
   $('.sign-in-form').get(0).reset()
   $.toast({
     text: 'Successfully Signed In', // Text that is to be shown in the toast
@@ -142,6 +144,8 @@ const changePasswordFailure = function () {
 }
 
 const signOutSuccess = function (data) {
+  $('.landing').show()
+  $('.userMain').hide()
   $.toast({
     text: 'Successfully Signed Out', // Text that is to be shown in the toast
     heading: 'Success!', // Optional heading to be shown on the toast

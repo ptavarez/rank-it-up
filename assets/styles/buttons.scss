@@ -24,9 +24,9 @@
     width: 150px;
   }
   @include breakpoint('tiny') {
-    left: 35%;
+    left: 40%;
     position: absolute;
-    top: 50%;
+    top: 65%;
     transform: translate(-50%, -50%);
   }
 }
@@ -60,9 +60,9 @@
     width: 150px;
   }
   @include breakpoint('tiny') {
-    left: 65%;
+    left: 75%;
     position: absolute;
-    top: 50%;
+    top: 65%;
     transform: translate(-50%, -50%);
   }
 

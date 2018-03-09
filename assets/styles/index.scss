@@ -5,3 +5,38 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import 'background';
 @import 'buttons';
 @import 'colors';
+
+h1 {
+  @include breakpoint('large') {
+    height: 50px;
+    left: 40%;
+    position: absolute;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
+  @include breakpoint('medium') {
+    height: 50px;
+    left: 40%;
+    position: absolute;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+  }
+  @include breakpoint('small') {
+    height: 50px;
+    left: 55%;
+    position: absolute;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+  @include breakpoint('tiny') {
+    height: 25px;
+    left: 75%;
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+  }
+}
