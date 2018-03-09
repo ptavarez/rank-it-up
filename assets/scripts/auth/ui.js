@@ -2,29 +2,185 @@
 
 const store = require('../store')
 
+require('../../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
+require('../../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
+
 const signUpSuccess = function (data) {
+  $('#signUp').modal('hide')
+  $('.sign-up-form').get(0).reset()
+  $.toast({
+    text: 'Successfully Signed Up', // Text that is to be shown in the toast
+    heading: 'Success!', // Optional heading to be shown on the toast
+    icon: 'success', // Type of toast icon
+    showHideTransition: 'fade', // fade, slide or plain
+    allowToastClose: true, // Boolean value true or false
+    hideAfter: 3000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+    position: 'top-center', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+    textAlign: 'left', // Text alignment i.e. left, right or center
+    loader: true, // Whether to show loader or not. True by default
+    loaderBg: '#9EC600', // Background color of the toast loader
+    beforeShow: function () {}, // will be triggered before the toast is shown
+    afterShown: function () {}, // will be triggered after the toat has been shown
+    beforeHide: function () {}, // will be triggered before the toast gets hidden
+    afterHidden: function () {} // will be triggered after the toast has been hidden
+  })
 }
 
-const signUpFailure = function (error) {
+const signUpFailure = function () {
+  $('.sign-up-form').get(0).reset()
+  $.toast({
+    text: 'There was an error on your sign up attempt. Please try again.', // Text that is to be shown in the toast
+    heading: 'Sign Up Failure', // Optional heading to be shown on the toast
+    icon: 'error', // Type of toast icon
+    showHideTransition: 'slide', // fade, slide or plain
+    allowToastClose: true, // Boolean value true or false
+    hideAfter: 4000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+    position: 'top-center', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+    textAlign: 'left', // Text alignment i.e. left, right or center
+    loader: true, // Whether to show loader or not. True by default
+    loaderBg: '#9EC600', // Background color of the toast loader
+    beforeShow: function () {}, // will be triggered before the toast is shown
+    afterShown: function () {}, // will be triggered after the toat has been shown
+    beforeHide: function () {}, // will be triggered before the toast gets hidden
+    afterHidden: function () {} // will be triggered after the toast has been hidden
+  })
 }
 
 const signInSuccess = function (data) {
   store.user = data.user
+  $('#signIn').modal('hide')
+  $('.sign-in-form').get(0).reset()
+  $.toast({
+    text: 'Successfully Signed In', // Text that is to be shown in the toast
+    heading: 'Success!', // Optional heading to be shown on the toast
+    icon: 'success', // Type of toast icon
+    showHideTransition: 'fade', // fade, slide or plain
+    allowToastClose: true, // Boolean value true or false
+    hideAfter: 3000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+    position: 'top-center', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+    textAlign: 'left', // Text alignment i.e. left, right or center
+    loader: true, // Whether to show loader or not. True by default
+    loaderBg: '#9EC600', // Background color of the toast loader
+    beforeShow: function () {}, // will be triggered before the toast is shown
+    afterShown: function () {}, // will be triggered after the toat has been shown
+    beforeHide: function () {}, // will be triggered before the toast gets hidden
+    afterHidden: function () {} // will be triggered after the toast has been hidden
+  })
 }
 
-const signInFailure = function (error) {
+const signInFailure = function () {
+  $('.sign-in-form').get(0).reset()
+  $.toast({
+    text: 'There was an error on your sign in attempt. Please try again.', // Text that is to be shown in the toast
+    heading: 'Sign In Failure', // Optional heading to be shown on the toast
+    icon: 'error', // Type of toast icon
+    showHideTransition: 'slide', // fade, slide or plain
+    allowToastClose: true, // Boolean value true or false
+    hideAfter: 4000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+    position: 'top-center', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+    textAlign: 'left', // Text alignment i.e. left, right or center
+    loader: true, // Whether to show loader or not. True by default
+    loaderBg: '#9EC600', // Background color of the toast loader
+    beforeShow: function () {}, // will be triggered before the toast is shown
+    afterShown: function () {}, // will be triggered after the toat has been shown
+    beforeHide: function () {}, // will be triggered before the toast gets hidden
+    afterHidden: function () {} // will be triggered after the toast has been hidden
+  })
 }
 
 const changePasswordSuccess = function (data) {
+  $('#changePassword').modal('hide')
+  $('.change-password-form').get(0).reset()
+  $.toast({
+    text: 'Successfully Changed Password', // Text that is to be shown in the toast
+    heading: 'Success!', // Optional heading to be shown on the toast
+    icon: 'success', // Type of toast icon
+    showHideTransition: 'fade', // fade, slide or plain
+    allowToastClose: true, // Boolean value true or false
+    hideAfter: 3000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+    position: 'top-center', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+    textAlign: 'left', // Text alignment i.e. left, right or center
+    loader: true, // Whether to show loader or not. True by default
+    loaderBg: '#9EC600', // Background color of the toast loader
+    beforeShow: function () {}, // will be triggered before the toast is shown
+    afterShown: function () {}, // will be triggered after the toat has been shown
+    beforeHide: function () {}, // will be triggered before the toast gets hidden
+    afterHidden: function () {} // will be triggered after the toast has been hidden
+  })
 }
 
-const changePasswordFailure = function (error) {
+const changePasswordFailure = function () {
+  $('.change-password-form').get(0).reset()
+  $.toast({
+    text: 'There was an error on your change password attempt. Please try again.', // Text that is to be shown in the toast
+    heading: 'Change Password Error', // Optional heading to be shown on the toast
+    icon: 'error', // Type of toast icon
+    showHideTransition: 'slide', // fade, slide or plain
+    allowToastClose: true, // Boolean value true or false
+    hideAfter: 4000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+    position: 'top-center', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+    textAlign: 'left', // Text alignment i.e. left, right or center
+    loader: true, // Whether to show loader or not. True by default
+    loaderBg: '#9EC600', // Background color of the toast loader
+    beforeShow: function () {}, // will be triggered before the toast is shown
+    afterShown: function () {}, // will be triggered after the toat has been shown
+    beforeHide: function () {}, // will be triggered before the toast gets hidden
+    afterHidden: function () {} // will be triggered after the toast has been hidden
+  })
 }
 
 const signOutSuccess = function (data) {
+  $.toast({
+    text: 'Successfully Signed Out', // Text that is to be shown in the toast
+    heading: 'Success!', // Optional heading to be shown on the toast
+    icon: 'success', // Type of toast icon
+    showHideTransition: 'fade', // fade, slide or plain
+    allowToastClose: true, // Boolean value true or false
+    hideAfter: 3000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+    position: 'top-center', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+    textAlign: 'left', // Text alignment i.e. left, right or center
+    loader: true, // Whether to show loader or not. True by default
+    loaderBg: '#9EC600', // Background color of the toast loader
+    beforeShow: function () {}, // will be triggered before the toast is shown
+    afterShown: function () {}, // will be triggered after the toat has been shown
+    beforeHide: function () {}, // will be triggered before the toast gets hidden
+    afterHidden: function () {} // will be triggered after the toast has been hidden
+  })
 }
 
-const signOutFailure = function (error) {
+const signOutFailure = function () {
+  $.toast({
+    text: 'You are not signed in.', // Text that is to be shown in the toast
+    heading: 'Sign Out Error', // Optional heading to be shown on the toast
+    icon: 'error', // Type of toast icon
+    showHideTransition: 'slide', // fade, slide or plain
+    allowToastClose: true, // Boolean value true or false
+    hideAfter: 4000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+    position: 'top-center', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+    textAlign: 'left', // Text alignment i.e. left, right or center
+    loader: true, // Whether to show loader or not. True by default
+    loaderBg: '#9EC600', // Background color of the toast loader
+    beforeShow: function () {}, // will be triggered before the toast is shown
+    afterShown: function () {}, // will be triggered after the toat has been shown
+    beforeHide: function () {}, // will be triggered before the toast gets hidden
+    afterHidden: function () {} // will be triggered after the toast has been hidden
+  })
 }
 
 module.exports = {
