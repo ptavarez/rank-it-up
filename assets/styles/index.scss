@@ -1,9 +1,5 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'breakpoints';
 @import 'background';
-
-
-// body,
-// html {
-//   height: 100%;
-// }
+@import 'buttons';
