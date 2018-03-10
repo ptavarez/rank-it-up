@@ -16,7 +16,7 @@
 
 <!-- Landing Section =================================================================================================-->
 
-    <div class="landing"> <!-- Landing -->
+    <div class="landing" hidden> <!-- Landing -->
 
       <h1>Rank It Up</h1>
 
@@ -75,7 +75,7 @@
 
 <!-- User Section =================================================================================================-->
 
-      <div class="userMain" hidden> <!-- userMain -->
+      <div class="userMain"> <!-- userMain -->
 
       <!-- User Settings.................................................... -->
 
@@ -124,6 +124,43 @@
           </div>
         </div>
       </div> <!-- /Change-password Modal -->
+
+      <!-- Menu..............................................................-->
+      <div class="menu col-md-12">
+
+        <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#newPlayer">New Player</button>
+
+
+      <!-- New player Modal-->
+        <div class="modal fade" id="newPlayer" tabindex="-1" role="dialog" aria-labelledby="NewPlayerLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="NewPlayerLabel">New Player</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <form class="new-player-form">
+                  <div class="form-group">
+                    <input class="form-control" id="NewPlayerName" placeholder="Name" name="player[name]">
+                  </div>
+                  <div class="form-group">
+                    <input class="form-control" id="NewPlayerDescription" placeholder="Description" name="player[description]">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /New Player Modal -->
+      </div>
+
 
     </div> <!-- /userMain -->
 
