@@ -6,6 +6,7 @@ body {
   background-color: $black;
   height: 75px;
   margin: 5px;
+  text-align: center;
 }
 
 .sign-in-form {
@@ -18,5 +19,13 @@ body {
 }
 
 .userOp {
-  margin-left: 45%;
+  margin-left: 90%;
+}
+
+.dropdown-menu {
+  length: 10px;
+}
+
+.menu {
+  height: 500px;
 }
