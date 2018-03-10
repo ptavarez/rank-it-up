@@ -20,12 +20,22 @@
 
       <h1>Rank It Up</h1>
 
-      <!-- Sign-up trigger modal ............................................-->
-      <button type="button" class="signUpButton btn btn-primary" data-toggle="modal" data-target="#signUp">
-        Sign Up
-      </button>
+      <!-- Sign-in Form ....................................................-->
+      <form class="sign-in-form col-md-4 box">
+        <div class="form-group">
+          <label for="signInEmail">Email address</label>
+          <input type="email" class="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
+        </div>
+        <div class="form-group">
+          <label for="signInPassword">Password</label>
+          <input type="password" class="form-control" id="signInPassword" placeholder="Password" name="credentials[password]">
+        </div>
+        <button type="submit" class="btn btn-primary">Sign In</button>
+        <br>
+        <p>Not a member? <a data-toggle="modal" data-target="#signUp">Sign Up!</a></p>
+      </form>
 
-      <!-- Sign-up Modal -->
+      <!-- Sign-up Modal ....................................................-->
       <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -41,7 +51,6 @@
                 <div class="form-group">
                   <label for="signUpEmail">Email address</label>
                   <input type="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
-                  <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                 </div>
                 <div class="form-group">
                   <label for="signUpPassword">Password</label>
@@ -61,52 +70,29 @@
         </div>
       </div> <!-- /Sign-up Modal -->
 
-      <!-- Sign-in trigger modal ............................................-->
-      <button type="button" class="signInButton btn btn-primary" data-toggle="modal" data-target="#signIn">
-        Sign In
-      </button>
-
-      <!-- Sign-in Modal -->
-      <div class="modal fade" id="signIn" tabindex="-1" role="dialog" aria-labelledby="signInLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="signInLabel">Sign In</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-
-            <div class="modal-body">
-              <form class="sign-in-form">
-                <div class="form-group">
-                  <label for="signInEmail">Email address</label>
-                  <input type="email" class="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
-                </div>
-                <div class="form-group">
-                  <label for="signInPassword">Password</label>
-                  <input type="password" class="form-control" id="signInPassword" placeholder="Password" name="credentials[password]">
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div> <!-- /Sign-in Modal -->
-
     </div> <!-- /Landing -->
+
 
 <!-- User Section =================================================================================================-->
 
       <div class="userMain" hidden> <!-- userMain -->
 
-      <!-- Sign-in trigger modal ............................................-->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#changePassword">
-        Change Password
-      </button>
+      <!-- User Settings.................................................... -->
+
+      <div class="col-md-12">
+        <!--Sign-out/Change-password buttons-->
+        <h4>Rank It Up</h4>
+        <div class="userOp dropdown">
+          <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            User Settings
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li data-toggle="modal" data-target="#changePassword">Change Password</li>
+              <li id="sign-out" value="Sign Out">Sign Out</li>
+          </ul>
+        </div>
+      </div>
 
       <!-- Change-password Modal -->
       <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="changePasswordLabel" aria-hidden="true">
@@ -138,13 +124,6 @@
           </div>
         </div>
       </div> <!-- /Change-password Modal -->
-
-      <!-- Sign-out Button ..................................................-->
-      <form id="sign-out" class="border">
-        <fieldset>
-          <input type="submit" value="Sign Out" class="btn btn-primary">
-        </fieldset>
-      </form> <!--/Sign-out Button -->
 
     </div> <!-- /userMain -->
 
