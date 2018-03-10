@@ -1,9 +1,9 @@
 'use strict'
 
-const store = require('../store')
-
 require('../../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
 require('../../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
+
+const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('#signUp').modal('hide')
