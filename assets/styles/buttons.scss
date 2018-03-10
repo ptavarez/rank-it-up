@@ -1,69 +1,9 @@
-.signInButton {
-  @include breakpoint('large') {
-    height: 50px;
-    left: 40%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-  }
-  @include breakpoint('medium') {
-    height: 50px;
-    left: 40%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-  }
-  @include breakpoint('small') {
-    height: 50px;
-    left: 40%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-  }
-  @include breakpoint('tiny') {
-    left: 40%;
-    position: absolute;
-    top: 65%;
-    transform: translate(-50%, -50%);
-  }
+
+a,
+li {
+  cursor: pointer;
 }
 
-
-
-
-.signUpButton {
-  @include breakpoint('large') {
-    height: 50px;
-    left: 60%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-  }
-  @include breakpoint('medium') {
-    height: 50px;
-    left: 60%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-  }
-  @include breakpoint('small') {
-    height: 50px;
-    left: 60%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-  }
-  @include breakpoint('tiny') {
-    left: 75%;
-    position: absolute;
-    top: 65%;
-    transform: translate(-50%, -50%);
-  }
-
+li:hover {
+  background: $blue;
 }
