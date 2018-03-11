@@ -14,8 +14,16 @@ const onCreatePlayer = function (event) {
     .catch(playerUi.createPlayerFailure)
 }
 
+const onGetPlayers = function (event) {
+  console.log('You Clicked Me')
+  playerApi.getPlayers()
+    .then(playerUi.getPlayersSuccess)
+}
+
 const playerHandlers = () => {
   $('.new-player-form').on('submit', onCreatePlayer)
+  $('.get-players').on('click', onGetPlayers)
+
 }
 
 module.exports = {

@@ -19,7 +19,7 @@ const createPlayer = function (data) {
 const getPlayers = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/players/',
-    method: 'POST',
+    method: 'GET',
     headers: {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token

@@ -3,8 +3,10 @@
 require('../../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
 require('../../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
 
+const showPlayersTemplate = require('../templates/player-listing.handlebars')
+
 const createPlayerSuccess = function (data) {
-  const playerName = document.forms['New Player']['player[name]'].value
+  // const playerName = document.forms['New Player']['player[name]'].value
   // console.log('Players name is ' + playerName)
   $('#newPlayer').modal('hide')
   $('.new-player-form').get(0).reset()
@@ -50,7 +52,14 @@ const createPlayerFailure = function () {
   })
 }
 
+const getPlayersSuccess = function (data) {
+  console.log(data)
+  const showPlayers = showPlayersTemplate({ players: data.players })
+  $('#allPlayers').html(showPlayers)
+}
+
 module.exports = {
   createPlayerSuccess,
-  createPlayerFailure
+  createPlayerFailure,
+  getPlayersSuccess
 }
