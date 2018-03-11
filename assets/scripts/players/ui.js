@@ -55,7 +55,7 @@ const createPlayerFailure = function () {
 const getPlayersSuccess = function (data) {
   console.log(data)
   const showPlayers = showPlayersTemplate({ players: data.players })
-  $('#allPlayers').html(showPlayers)
+  $('.allPlayers').html(showPlayers)
 }
 
 module.exports = {

@@ -28,7 +28,19 @@ const getPlayers = function (data) {
   })
 }
 
+const deletePlayer = function (id) {
+  return $.ajax({
+    url: config.apiOrigin + '/players/' + id,
+    method: 'DELETE',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createPlayer,
-  getPlayers
+  getPlayers,
+  deletePlayer
 }
