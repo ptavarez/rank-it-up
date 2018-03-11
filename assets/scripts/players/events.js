@@ -7,7 +7,7 @@ const playerUi = require('./ui.js')
 
 const onCreatePlayer = function (event) {
   event.preventDefault()
-  // console.log(document.forms['New Player']['player[name]'].value)
+  // console.log(document.forms['.new-player-form']['player[name]'].value)
   const data = getFormFields(this)
   playerApi.createPlayer(data)
     .then(playerUi.createPlayerSuccess)
@@ -15,12 +15,12 @@ const onCreatePlayer = function (event) {
 }
 
 const onGetPlayers = function (event) {
-  console.log('You Clicked Me')
   playerApi.getPlayers()
     .then(playerUi.getPlayersSuccess)
 }
 
 const onDeleteBook = function (event) {
+  console.log('You Clicked Me')
   const id = event.target.dataset.id
   playerApi.deletePlayer(id)
     .then(() => onGetPlayers(event))
@@ -30,7 +30,7 @@ const playerHandlers = () => {
   $('.new-player-form').on('submit', onCreatePlayer)
   $('.get-players').on('click', onGetPlayers)
   $('.player-delete').on('click', onGetPlayers)
-  $('#allPlayers').on('click', '.player-delete', onDeleteBook)
+  $('.allPlayers').on('click', '.player-delete', onDeleteBook)
 }
 
 module.exports = {

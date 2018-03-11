@@ -35,8 +35,53 @@
         <p>Not a member? <a data-toggle="modal" data-target="#signUp">Sign Up!</a></p>
       </form>
 
-      <!-- Sign-up Modal ....................................................-->
-      <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="true">
+    </div> <!-- /Landing -->
+
+
+<!-- User Section =================================================================================================-->
+
+    <div class="userMain" hidden> <!-- userMain -->
+
+      <!-- Header.................................................... -->
+      <div class="header col-md-12">
+        <!--Sign-out/Change-password buttons-->
+        <h4>Rank It Up</h4>
+        <div class="userOp dropdown">
+          <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            User Settings
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li id="return-menu">Main Menu</li>
+            <li data-toggle="modal" data-target="#changePassword">Change Password</li>
+            <li id="sign-out" value="Sign Out">Sign Out</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Menu..............................................................-->
+      <div class="menu col-md-6">
+
+        <!-- Menu buttons-->
+        <button type="button" class="new-player btn btn-secondary" data-toggle="modal" data-target="#newPlayer">New Player</button>
+        <button type="button" class="get-players btn btn-secondary">View Players</button>
+
+      </div> <!-- /menu-->
+
+      <!-- All player .......................................................-->
+      <div class="allPlayers col-md-12">
+        <!-- All Players-->
+      </div>
+
+    </div> <!-- /userMain -->
+
+
+
+<!-- Modals=========================================================================================================================-->
+
+
+        <!-- Sign-up Modal ....................................................-->
+        <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -70,32 +115,8 @@
         </div>
       </div> <!-- /Sign-up Modal -->
 
-    </div> <!-- /Landing -->
-
-
-<!-- User Section =================================================================================================-->
-
-      <div class="userMain" hidden> <!-- userMain -->
-
-      <!-- User Settings.................................................... -->
-
-      <div class="col-md-12">
-        <!--Sign-out/Change-password buttons-->
-        <h4>Rank It Up</h4>
-        <div class="userOp dropdown">
-          <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            User Settings
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dLabel">
-            <li data-toggle="modal" data-target="#changePassword">Change Password</li>
-              <li id="sign-out" value="Sign Out">Sign Out</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Change-password Modal -->
-      <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="changePasswordLabel" aria-hidden="true">
+        <!-- Change-password Modal -->
+        <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="changePasswordLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -125,19 +146,7 @@
         </div>
       </div> <!-- /Change-password Modal -->
 
-      <!-- Menu..............................................................-->
-      <div class="menu col-md-12">
-
-        <!-- Menu buttons-->
-
-        <button type="button" class="new-player btn btn-secondary" data-toggle="modal" data-target="#newPlayer">New Player</button>
-        <button type="button" class="get-players btn btn-secondary">View Players</button>
-
-        <div id="allPlayers" class="allPlayers">
-        </div>
-
-
-      <!-- New player Modal-->
+        <!-- New player Modal-->
         <div class="modal fade" id="newPlayer" tabindex="-1" role="dialog" aria-labelledby="NewPlayerLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -149,7 +158,7 @@
               </div>
 
               <div class="modal-body">
-                <form class="new-player-form" name="New Player">
+                <form class="new-player-form">
                   <div class="form-group">
                     <input type="text" class="form-control" id="NewPlayerName" placeholder="Name" name="player[name]">
                   </div>
@@ -166,12 +175,6 @@
           </div>
         </div> <!-- /New Player Modal -->
 
-      </div>
-
-
-    </div> <!-- /userMain -->
-
     </body>
-
 
 </html>

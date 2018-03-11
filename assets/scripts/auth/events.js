@@ -36,11 +36,16 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onReturn = function () {
+  ui.returnMain()
+}
+
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp)
   $('.sign-in-form').on('submit', onSignIn)
   $('.change-password-form').on('submit', onChangePassword)
   $('#sign-out').on('click', onSignOut)
+  $('#return-menu').on('click', onReturn)
 }
 
 module.exports = {

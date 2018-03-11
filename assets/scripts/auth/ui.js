@@ -54,7 +54,9 @@ const signInSuccess = function (data) {
   store.user = data.user
   $('#signIn').modal('hide')
   $('.landing').hide()
+  $('.allPlayers').hide()
   $('.userMain').show()
+  $('.menu').show()
   $('.sign-in-form').get(0).reset()
   $.toast({
     text: 'Successfully Signed In', // Text that is to be shown in the toast
@@ -187,6 +189,11 @@ const signOutFailure = function () {
   })
 }
 
+const returnMain = function () {
+  $('.menu').show()
+  $('.allPlayers').hide()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -195,5 +202,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  returnMain
 }
