@@ -120,7 +120,7 @@ I completed the API side of this project in less than two days. I felt like I ha
 
 Originally, I wanted a ton of features for this app. As time went on, I had to pick and choose the more important features to meet requirements for the project. It's a bummer having to present what I feel like is an incomplete project, but it is what it is. This is something that I want to take my time with because it's an app that all my friends will use.
 
-Before starting this project, we were introduced to Handlebars. I feel like this tool made my life a whole lot easier when it came to displaying all a user's players. Without it, I feel like things will have been much harder. 
+Before starting this project, we were introduced to Handlebars. I feel like this tool made my life a whole lot easier when it came to displaying all a user's players. Without it, I feel like things will have been much harder.
 
 ## Still Have Work To Finish
 
@@ -129,3 +129,8 @@ Eventually, I will like to expand the user stories and make the application more
 A problem I know I will need to solve in the near future is within the match function. I want to be able to create fields where a user can choose two players or teams and then be able to select only one of those as the winner or loser.
 
 For now, this client has all the necessary fields to meet requirements. The MVP is actually fairly simple. As time goes on, this applicaion will change and grow more complex. Even so, as long as I stay organized, things should still flow smoothly.
+
+Here's a list of things I need to work on:
+- Add match resource to client and have it communicate with the API
+- Create a match function
+- Create a standings section 
