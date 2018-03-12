@@ -192,6 +192,7 @@ const signOutFailure = function () {
 const returnMain = function () {
   $('.menu').show()
   $('.allPlayers').hide()
+  $('#return-menu').hide()
 }
 
 module.exports = {

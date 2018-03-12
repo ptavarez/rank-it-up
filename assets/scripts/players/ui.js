@@ -6,8 +6,6 @@ require('../../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
 const showPlayersTemplate = require('../templates/player-listing.handlebars')
 
 const createPlayerSuccess = function (data) {
-  // const playerName = document.forms['.']['player[name]'].value
-  // console.log('Players name is ' + playerName)
   $('#newPlayer').modal('hide')
   $('.new-player-form').get(0).reset()
   $.toast({
@@ -75,6 +73,7 @@ const getPlayersSuccess = function (data) {
   } else {
     $('.menu').hide()
     $('.allPlayers').show()
+    $('#return-menu').show()
     const showPlayers = showPlayersTemplate({ players: data.players })
     $('.allPlayers').html(showPlayers)
   }
