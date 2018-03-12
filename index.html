@@ -45,14 +45,14 @@
       <!-- Header.................................................... -->
       <div class="header col-md-12">
         <!--Sign-out/Change-password buttons-->
-        <h4>Rank It Up</h4>
+        <h2>Rank It Up</h2>
         <div class="userOp dropdown">
           <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            User Settings
+            User Options
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dLabel">
-            <li id="return-menu">Main Menu</li>
+            <li id="return-menu" hidden>Main Menu</li>
             <li data-toggle="modal" data-target="#changePassword">Change Password</li>
             <li id="sign-out" value="Sign Out">Sign Out</li>
           </ul>
@@ -62,6 +62,7 @@
       <!-- Menu..............................................................-->
       <div class="menu col-md-6">
 
+        <h3>Main Menu</h3>
         <!-- Menu buttons-->
         <button type="button" class="new-player btn btn-secondary" data-toggle="modal" data-target="#newPlayer">New Player</button>
         <button type="button" class="get-players btn btn-secondary">View Players</button>
