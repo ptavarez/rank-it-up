@@ -17,12 +17,15 @@ const onCreatePlayer = function (event) {
 const onGetPlayers = function (event) {
   playerApi.getPlayers()
     .then(playerUi.getPlayersSuccess)
+    .catch(playerUi.getPlayersFailure)
 }
 
 const onDeleteBook = function () {
   const id = event.target.dataset.id
   playerApi.deletePlayer(id)
+    .then(playerUi.deletePlayerSuccess)
     .then(() => onGetPlayers(event))
+    .catch(playerUi.deletePlayerFailure)
 }
 
 const playerHandlers = () => {
