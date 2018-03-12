@@ -21,10 +21,13 @@ const onGetPlayers = function (event) {
 }
 
 const onUpdatePlayer = function (event) {
+  event.preventDefault()
   const data = getFormFields(this)
+  console.log(data)
   playerApi.updatePlayer(data)
-    .then(playerUi.getPlayersSuccess)
-    .catch(playerUi.getPlayersFailure)
+    .then(playerUi.updatePlayerSuccess)
+    .then(() => onGetPlayers(event))
+    .catch(playerUi.updatePlayerFailure)
 }
 
 const onDeletePlayer = function () {
@@ -38,7 +41,7 @@ const onDeletePlayer = function () {
 const playerHandlers = () => {
   $('.new-player-form').on('submit', onCreatePlayer)
   $('.get-players').on('click', onGetPlayers)
-  $('.allPlayers').on('click', '.player-update', onUpdatePlayer)
+  $('.player-update-form').on('submit', onUpdatePlayer)
   $('.allPlayers').on('click', '.player-delete', onDeletePlayer)
 }
 
