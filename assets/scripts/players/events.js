@@ -20,7 +20,14 @@ const onGetPlayers = function (event) {
     .catch(playerUi.getPlayersFailure)
 }
 
-const onDeleteBook = function () {
+const onUpdatePlayer = function (event) {
+  const data = getFormFields(this)
+  playerApi.updatePlayer(data)
+    .then(playerUi.getPlayersSuccess)
+    .catch(playerUi.getPlayersFailure)
+}
+
+const onDeletePlayer = function () {
   const id = event.target.dataset.id
   playerApi.deletePlayer(id)
     .then(playerUi.deletePlayerSuccess)
@@ -31,7 +38,8 @@ const onDeleteBook = function () {
 const playerHandlers = () => {
   $('.new-player-form').on('submit', onCreatePlayer)
   $('.get-players').on('click', onGetPlayers)
-  $('.allPlayers').on('click', '.player-delete', onDeleteBook)
+  $('.allPlayers').on('click', '.player-update', onUpdatePlayer)
+  $('.allPlayers').on('click', '.player-delete', onDeletePlayer)
 }
 
 module.exports = {
