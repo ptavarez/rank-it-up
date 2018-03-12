@@ -136,6 +136,7 @@ const updatePlayerSuccess = function () {
 }
 
 const updatePlayerFailure = function () {
+  $('.player-update-form').get(0).reset()
   $.toast({
     text: 'Please confirm that the correct Player ID is provided. All fields are required.', // Text that is to be shown in the toast
     heading: 'Error', // Optional heading to be shown on the toast
