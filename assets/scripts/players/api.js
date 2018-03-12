@@ -15,15 +15,14 @@ const createPlayer = function (data) {
   })
 }
 
-const getPlayers = function (data) {
+const getPlayers = function () {
   return $.ajax({
     url: config.apiOrigin + '/players/',
     method: 'GET',
     headers: {
       contentType: 'application/json',
       Authorization: 'Token token=' + store.user.token
-    },
-    data
+    }
   })
 }
 

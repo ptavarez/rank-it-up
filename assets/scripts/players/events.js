@@ -20,6 +20,11 @@ const onGetPlayers = function (event) {
     .catch(playerUi.getPlayersFailure)
 }
 
+const onGetPlayersTwo = function (event) {
+  playerApi.getPlayers()
+    .then(playerUi.getPlayersSuccessTwo)
+}
+
 const onUpdatePlayer = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
@@ -34,7 +39,7 @@ const onDeletePlayer = function () {
   const id = event.target.dataset.id
   playerApi.deletePlayer(id)
     .then(playerUi.deletePlayerSuccess)
-    .then(() => onGetPlayers(event))
+    .then(() => onGetPlayersTwo(event))
     .catch(playerUi.deletePlayerFailure)
 }
 
