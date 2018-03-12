@@ -38,9 +38,9 @@ const getPlayer = function (id) {
   })
 }
 
-const updatePlayer = function (data, id) {
+const updatePlayer = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/players/' + id,
+    url: config.apiOrigin + '/players/' + data.player.id,
     method: 'PATCH',
     headers: {
       contentType: 'application/json',
