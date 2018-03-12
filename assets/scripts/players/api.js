@@ -3,7 +3,6 @@
 const config = require('../config')
 const store = require('../store')
 
-
 const createPlayer = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/players/',
@@ -28,6 +27,17 @@ const getPlayers = function (data) {
   })
 }
 
+const getPlayer = function (id) {
+  return $.ajax({
+    url: config.apiOrigin + '/players/' + id,
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const deletePlayer = function (id) {
   return $.ajax({
     url: config.apiOrigin + '/players/' + id,
@@ -42,5 +52,6 @@ const deletePlayer = function (id) {
 module.exports = {
   createPlayer,
   getPlayers,
-  deletePlayer
+  deletePlayer,
+  getPlayer
 }

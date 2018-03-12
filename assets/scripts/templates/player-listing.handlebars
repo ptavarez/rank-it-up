@@ -7,13 +7,11 @@
 
 
       <ul data-id="{{player.id}}" class="dropdown-menu">
-        {{player.name}}
+        <p>Wins:  {{player.wins}}</p>
+        <p>Losses:  {{player.losses}}</p>
         <li><a href="#">Update</a></li>
-        <li><a href="#">Stats</a></li>
         <li><a class="player-delete" data-id="{{player.id}}">Delete</a></li>
       </ul>
     </div>
-
-
 
 {{/each}}

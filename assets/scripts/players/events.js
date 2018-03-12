@@ -19,8 +19,7 @@ const onGetPlayers = function (event) {
     .then(playerUi.getPlayersSuccess)
 }
 
-const onDeleteBook = function (event) {
-  console.log('You Clicked Me')
+const onDeleteBook = function () {
   const id = event.target.dataset.id
   playerApi.deletePlayer(id)
     .then(() => onGetPlayers(event))
@@ -29,7 +28,6 @@ const onDeleteBook = function (event) {
 const playerHandlers = () => {
   $('.new-player-form').on('submit', onCreatePlayer)
   $('.get-players').on('click', onGetPlayers)
-  $('.player-delete').on('click', onGetPlayers)
   $('.allPlayers').on('click', '.player-delete', onDeleteBook)
 }
 

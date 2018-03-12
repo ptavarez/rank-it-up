@@ -53,7 +53,7 @@ const createPlayerFailure = function () {
 }
 
 const getPlayersSuccess = function (data) {
-  console.log(data)
+  // console.log(data)
   $('.menu').hide()
   $('.allPlayers').show()
   const showPlayers = showPlayersTemplate({ players: data.players })
