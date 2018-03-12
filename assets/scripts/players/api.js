@@ -38,6 +38,18 @@ const getPlayer = function (id) {
   })
 }
 
+const updatePlayer = function (data, id) {
+  return $.ajax({
+    url: config.apiOrigin + '/players/' + id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 const deletePlayer = function (id) {
   return $.ajax({
     url: config.apiOrigin + '/players/' + id,
@@ -52,6 +64,7 @@ const deletePlayer = function (id) {
 module.exports = {
   createPlayer,
   getPlayers,
-  deletePlayer,
-  getPlayer
+  getPlayer,
+  updatePlayer,
+  deletePlayer
 }
