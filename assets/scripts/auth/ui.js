@@ -10,7 +10,6 @@ const signUpSuccess = function (data) {
   $('.sign-up-form').get(0).reset()
   $.toast({
     text: 'Successfully Signed Up', // Text that is to be shown in the toast
-    heading: 'Success!', // Optional heading to be shown on the toast
     icon: 'success', // Type of toast icon
     showHideTransition: 'fade', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -32,7 +31,6 @@ const signUpFailure = function () {
   $('.sign-up-form').get(0).reset()
   $.toast({
     text: 'There was an error on your sign up attempt. Please try again.', // Text that is to be shown in the toast
-    heading: 'Sign Up Failure', // Optional heading to be shown on the toast
     icon: 'error', // Type of toast icon
     showHideTransition: 'slide', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -54,13 +52,12 @@ const signInSuccess = function (data) {
   store.user = data.user
   $('#signIn').modal('hide')
   $('.landing').hide()
-  $('.allPlayers').hide()
+  $('.players-section').hide()
   $('.userMain').show()
   $('.menu').show()
   $('.sign-in-form').get(0).reset()
   $.toast({
     text: 'Successfully Signed In', // Text that is to be shown in the toast
-    heading: 'Success!', // Optional heading to be shown on the toast
     icon: 'success', // Type of toast icon
     showHideTransition: 'fade', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -82,7 +79,6 @@ const signInFailure = function () {
   $('.sign-in-form').get(0).reset()
   $.toast({
     text: 'There was an error on your sign in attempt. Please try again.', // Text that is to be shown in the toast
-    heading: 'Sign In Failure', // Optional heading to be shown on the toast
     icon: 'error', // Type of toast icon
     showHideTransition: 'slide', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -105,7 +101,6 @@ const changePasswordSuccess = function (data) {
   $('.change-password-form').get(0).reset()
   $.toast({
     text: 'Successfully Changed Password', // Text that is to be shown in the toast
-    heading: 'Success!', // Optional heading to be shown on the toast
     icon: 'success', // Type of toast icon
     showHideTransition: 'fade', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -127,7 +122,6 @@ const changePasswordFailure = function () {
   $('.change-password-form').get(0).reset()
   $.toast({
     text: 'There was an error on your change password attempt. Please try again.', // Text that is to be shown in the toast
-    heading: 'Change Password Error', // Optional heading to be shown on the toast
     icon: 'error', // Type of toast icon
     showHideTransition: 'slide', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -150,7 +144,6 @@ const signOutSuccess = function (data) {
   $('.userMain').hide()
   $.toast({
     text: 'Successfully Signed Out', // Text that is to be shown in the toast
-    heading: 'Success!', // Optional heading to be shown on the toast
     icon: 'success', // Type of toast icon
     showHideTransition: 'fade', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -171,7 +164,6 @@ const signOutSuccess = function (data) {
 const signOutFailure = function () {
   $.toast({
     text: 'You are not signed in.', // Text that is to be shown in the toast
-    heading: 'Sign Out Error', // Optional heading to be shown on the toast
     icon: 'error', // Type of toast icon
     showHideTransition: 'slide', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -191,8 +183,7 @@ const signOutFailure = function () {
 
 const returnMain = function () {
   $('.menu').show()
-  $('.allPlayers').hide()
-  $('#return-menu').hide()
+  $('.players-section').hide()
 }
 
 module.exports = {

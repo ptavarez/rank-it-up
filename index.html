@@ -21,9 +21,10 @@
       <h1>Rank It Up</h1>
 
       <!-- Sign-in Form ....................................................-->
-      <form class="sign-in-form col-md-4 box">
+      <form class="sign-in-form col-md-6 box">
+        <h4>Sign In</h4>
         <div class="form-group">
-          <label for="signInEmail">Email address</label>
+          <label for="signInEmail">Email Address</label>
           <input type="email" class="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
         </div>
         <div class="form-group">
@@ -43,7 +44,7 @@
     <div class="userMain" hidden> <!-- userMain -->
 
       <!-- Header.................................................... -->
-      <div class="header col-md-12">
+      <div class="menu">
         <!--Sign-out/Change-password buttons-->
         <h2>Rank It Up</h2>
         <div class="userOp dropdown">
@@ -52,15 +53,13 @@
             <span class="caret"></span>
           </button>
           <ul class="dropdown-menu" aria-labelledby="dLabel">
-            <li id="return-menu" hidden>Main Menu</li>
             <li data-toggle="modal" data-target="#changePassword">Change Password</li>
             <li id="sign-out" value="Sign Out">Sign Out</li>
           </ul>
         </div>
-      </div>
 
       <!-- Menu..............................................................-->
-      <div class="menu col-md-6">
+
 
         <h3>Main Menu</h3>
         <!-- Menu buttons-->
@@ -69,9 +68,26 @@
 
       </div> <!-- /menu-->
 
-      <!-- All player .......................................................-->
-      <div class="allPlayers col-md-12">
-        <!-- All Players-->
+      <!-- Players section ==========================================================================================================-->
+      <div class="players-section" hidden>
+
+        <h2>Rank It Up</h2>
+        <div class="playerOp dropdown">
+          <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            User Options
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li id="return-menu">Main Menu</li>
+            <li data-toggle="modal" data-target="#changePassword">Change Password</li>
+            <li class="sign-out" value="Sign Out">Sign Out</li>
+          </ul>
+        </div>
+
+        <div class="allPlayers">
+          <!-- All Players-->
+        </div>
+
       </div>
 
     </div> <!-- /userMain -->

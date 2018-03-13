@@ -10,7 +10,6 @@ const createPlayerSuccess = function (data) {
   $('.new-player-form').get(0).reset()
   $.toast({
     text: 'Player Created', // Text that is to be shown in the toast
-    heading: 'Success!', // Optional heading to be shown on the toast
     icon: 'success', // Type of toast icon
     showHideTransition: 'fade', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -32,7 +31,6 @@ const createPlayerFailure = function () {
   $('.new-player-form').get(0).reset()
   $.toast({
     text: 'Please make sure to fill out both fields and try again.', // Text that is to be shown in the toast
-    heading: 'Create Player Failure', // Optional heading to be shown on the toast
     icon: 'error', // Type of toast icon
     showHideTransition: 'slide', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -54,7 +52,6 @@ const getPlayersSuccess = function (data) {
   if (data.players.length === 0) {
     $.toast({
       text: 'Please create a player first.', // Text that is to be shown in the toast
-      heading: 'No Players', // Optional heading to be shown on the toast
       icon: 'error', // Type of toast icon
       showHideTransition: 'slide', // fade, slide or plain
       allowToastClose: true, // Boolean value true or false
@@ -72,8 +69,7 @@ const getPlayersSuccess = function (data) {
     })
   } else {
     $('.menu').hide()
-    $('.allPlayers').show()
-    $('#return-menu').show()
+    $('.players-section').show()
     const showPlayers = showPlayersTemplate({ players: data.players })
     $('.allPlayers').html(showPlayers)
   }
@@ -82,9 +78,9 @@ const getPlayersSuccess = function (data) {
 const getPlayersSuccessTwo = function (data) {
   if (data.players.length === 0) {
     $('.menu').show()
-    $('.allPlayers').hide()
+    $('.players-section').hide()
   } else {
-    $('.allPlayers').show()
+    $('.players-section').show()
     const showPlayers = showPlayersTemplate({ players: data.players })
     $('.allPlayers').html(showPlayers)
   }
@@ -93,7 +89,6 @@ const getPlayersSuccessTwo = function (data) {
 const getPlayersFailure = function () {
   $.toast({
     text: 'We are unable to fetch your players at this time. Please try again later.', // Text that is to be shown in the toast
-    heading: 'Error', // Optional heading to be shown on the toast
     icon: 'error', // Type of toast icon
     showHideTransition: 'slide', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -116,7 +111,6 @@ const updatePlayerSuccess = function () {
   $('.player-update-form').get(0).reset()
   $.toast({
     text: 'Player Updated', // Text that is to be shown in the toast
-    heading: 'Success!', // Optional heading to be shown on the toast
     icon: 'success', // Type of toast icon
     showHideTransition: 'fade', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -138,7 +132,6 @@ const updatePlayerFailure = function () {
   $('.player-update-form').get(0).reset()
   $.toast({
     text: 'Please confirm that the correct Player ID is provided. All fields are required.', // Text that is to be shown in the toast
-    heading: 'Error', // Optional heading to be shown on the toast
     icon: 'error', // Type of toast icon
     showHideTransition: 'slide', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -159,7 +152,6 @@ const updatePlayerFailure = function () {
 const deletePlayerSuccess = function () {
   $.toast({
     text: 'Player Deleted', // Text that is to be shown in the toast
-    heading: 'Success!', // Optional heading to be shown on the toast
     icon: 'success', // Type of toast icon
     showHideTransition: 'fade', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
@@ -180,7 +172,6 @@ const deletePlayerSuccess = function () {
 const deletePlayerFailure = function () {
   $.toast({
     text: 'Somethig went wrong with your request. Please try again later', // Text that is to be shown in the toast
-    heading: 'Error', // Optional heading to be shown on the toast
     icon: 'error', // Type of toast icon
     showHideTransition: 'slide', // fade, slide or plain
     allowToastClose: true, // Boolean value true or false
