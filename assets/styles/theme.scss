@@ -5,115 +5,139 @@ body {
 // Landing Section -------------------------------------------------------------
 
 .landing {
-  background: url('https://i.imgur.com/WCQxz7H.jpg') no-repeat center center fixed;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
+  @include breakpoint(medium) {
+    background: url('https://i.imgur.com/WCQxz7H.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
 }
 
 .sign-in-form {
-  background-color: rgba($black, .7);
-  left: 51%;
-  padding: 10px;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  @include breakpoint(medium) {
+    background-color: rgba($black, .7);
+    left: 51%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 // User Section ----------------------------------------------------------------
 
 .userMain {
-  background: url('https://i.imgur.com/WCQxz7H.jpg') no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  right: 0;
+  @include breakpoint(medium) {
+    background: url('https://i.imgur.com/WCQxz7H.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
 }
 
 .menu {
-  background-color: rgba($black, .7);
-  height: 100%;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  @include breakpoint(medium) {
+    background-color: rgba($black, .7);
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
 }
 
 h2 {
-  left: 50%;
-  padding: 10px;
-  position: absolute;
-  top: 0%;
-  transform: translate(-50%, -50%);
+  @include breakpoint(medium) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 0%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .userOp {
-  left: 50%;
-  padding: 10px;
-  position: absolute;
-  top: 8%;
-  transform: translate(-50%, -50%);
+  @include breakpoint(medium) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 8%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 h3 {
-  left: 50%;
-  padding: 10px;
-  position: absolute;
-  top: 30%;
-  transform: translate(-50%, -50%);
+  @include breakpoint(medium) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .new-player {
-  left: 50%;
-  padding: 10px;
-  position: absolute;
-  top: 40%;
-  transform: translate(-50%, -50%);
+  @include breakpoint(medium) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .get-players {
-  left: 50%;
-  padding: 10px;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  @include breakpoint(medium) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 // Players Section -------------------------------------------------------------
 
 .players-section {
-  background-color: rgba($black, .9);
-  height: 100%;
-  left: 50%;
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
+  @include breakpoint(medium) {
+    background-color: rgba($black, .9);
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
 }
 
 .playerOp {
-  left: 50%;
-  padding: 10px;
-  position: absolute;
-  top: 8%;
-  transform: translate(-50%, -50%);
+  @include breakpoint(medium) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 8%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .allPlayers {
-  background-color: $red;
-  left: 50%;
-  padding: 10px;
-  position: absolute;
-  top: 40%;
-  transform: translate(-50%, -50%);
+  @include breakpoint(medium) {
+    background-color: $red;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
 }
