@@ -7,7 +7,6 @@ const playerUi = require('./ui.js')
 
 const onCreatePlayer = function (event) {
   event.preventDefault()
-  // console.log(document.forms['.new-player-form']['player[name]'].value)
   const data = getFormFields(this)
   playerApi.createPlayer(data)
     .then(playerUi.createPlayerSuccess)
@@ -28,7 +27,6 @@ const onGetPlayersTwo = function (event) {
 const onUpdatePlayer = function (event) {
   event.preventDefault()
   const data = getFormFields(this)
-  console.log(data)
   playerApi.updatePlayer(data)
     .then(playerUi.updatePlayerSuccess)
     .then(() => onGetPlayers(event))
