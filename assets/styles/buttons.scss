@@ -54,6 +54,26 @@ li:hover {
   }
 }
 
+// Players section -------------------------------------------------------------
+#player-update-hover:hover {
+  color: $redd;
+  background-color: $black;
+}
+
+#player-delete-hover:hover {
+  color: $redd;
+  background-color: $black;
+}
+
+#player-update-hover {
+  color: $gray;
+}
+
+#player-delete-hover {
+  color: $gray;
+}
+
+
 // Modals ----------------------------------------------------------------------
 .modal-btn {
   background-color: $black;
