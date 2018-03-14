@@ -1,14 +1,14 @@
 {{#each players as |player|}}
 
-    <div class="player col-md-2">
+    <div class="player col-md-4">
       <li data-id="{{player.id}}" class="dropdown-toggle"  data-toggle="dropdown" style="margin:10px">
         {{player.name}}
       </li>
 
 
       <ul data-id="{{player.id}}" class="dropdown-menu">
+        <p>{{player.description}}</p>
         <p>Player ID: {{player.id}}</p>
-        <p>Description: {{player.description}}</p>
         <p>
           {{#if player.wins}}
             Wins:  {{player.wins}}

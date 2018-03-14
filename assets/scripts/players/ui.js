@@ -19,7 +19,7 @@ const createPlayerSuccess = function (data) {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -40,7 +40,7 @@ const createPlayerFailure = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -61,7 +61,7 @@ const getPlayersSuccess = function (data) {
 
       textAlign: 'left', // Text alignment i.e. left, right or center
       loader: true, // Whether to show loader or not. True by default
-      loaderBg: '#9EC600', // Background color of the toast loader
+      loaderBg: '#FF0077', // Background color of the toast loader
       beforeShow: function () {}, // will be triggered before the toast is shown
       afterShown: function () {}, // will be triggered after the toat has been shown
       beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -98,7 +98,7 @@ const getPlayersFailure = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -120,7 +120,7 @@ const updatePlayerSuccess = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -141,7 +141,7 @@ const updatePlayerFailure = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -161,7 +161,7 @@ const deletePlayerSuccess = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -181,7 +181,7 @@ const deletePlayerFailure = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden

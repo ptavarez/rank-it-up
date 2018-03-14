@@ -4,9 +4,30 @@ body {
 
 // Landing Section -------------------------------------------------------------
 
+h1 {
+  @include breakpoint(medium) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+  }
+}
+
+h4 {
+  @include breakpoint(medium) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 25%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .landing {
   @include breakpoint(medium) {
-    background: url('https://i.imgur.com/WCQxz7H.jpg') no-repeat center center fixed;
+    background: url('https://i.imgur.com/D1Qiwk9.jpg') no-repeat center center fixed;
     -moz-background-size: cover;
     -o-background-size: cover;
     -webkit-background-size: cover;
@@ -19,17 +40,54 @@ body {
 }
 
 .sign-in-form {
-  @include breakpoint(medium) {
-    background-color: rgba($black, .7);
-    left: 51%;
-    padding: 10px;
+  @include breakpoint(tiny) {
+    background-color: rgba($black, .4);
+    border-radius: 15px;
+    left: 50%;
+    padding: 20px;
     position: absolute;
-    top: 50%;
+    top: 59.90%;
     transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  @include breakpoint(small) {
+    background-color: rgba($black, .4);
+    border-radius: 15px;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 59.90%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+  }
+  @include breakpoint(medium) {
+    background-color: rgba($black, .4);
+    border-radius: 15px;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    top: 59.90%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
+}
+
+.sign-in-form input {
+  @include breakpoint(medium) {
+    margin: auto;
+    width: 70%;
   }
 }
 
 // User Section ----------------------------------------------------------------
+.head {
+    background-color: $black;
+    background-size: cover;
+    height: 10%;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
 
 .userMain {
   @include breakpoint(medium) {
@@ -59,22 +117,27 @@ body {
 
 h2 {
   @include breakpoint(medium) {
-    left: 50%;
+    left: 8%;
     padding: 10px;
     position: absolute;
-    top: 0%;
+    top: 20%;
     transform: translate(-50%, -50%);
   }
 }
 
 .userOp {
   @include breakpoint(medium) {
-    left: 50%;
+    left: 93%;
     padding: 10px;
     position: absolute;
-    top: 8%;
+    top: 73%;
     transform: translate(-50%, -50%);
+    width: 200px;
   }
+}
+
+.dropdown-menu {
+  background-color: $black;
 }
 
 h3 {
@@ -82,13 +145,30 @@ h3 {
     left: 50%;
     padding: 10px;
     position: absolute;
-    top: 30%;
+    top: 15%;
     transform: translate(-50%, -50%);
   }
 }
 
 .new-player {
+  @include breakpoint(tiny) {
+    background-color: $black;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+  @include breakpoint(small) {
+    background-color: $black;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 90%;
+    transform: translate(-50%, -50%);
+  }
   @include breakpoint(medium) {
+    background-color: $black;
     left: 50%;
     padding: 10px;
     position: absolute;
@@ -98,11 +178,28 @@ h3 {
 }
 
 .get-players {
-  @include breakpoint(medium) {
+  @include breakpoint(tiny) {
+    background-color: $black;
     left: 50%;
     padding: 10px;
     position: absolute;
-    top: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+  }
+  @include breakpoint(small) {
+    background-color: $black;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    transform: translate(-50%, -50%);
+  }
+  @include breakpoint(medium) {
+    background-color: $black;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 60%;
     transform: translate(-50%, -50%);
   }
 }
@@ -110,6 +207,24 @@ h3 {
 // Players Section -------------------------------------------------------------
 
 .players-section {
+  @include breakpoint(tiny) {
+    background-color: rgba($black, .9);
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  @include breakpoint(small) {
+    background-color: rgba($black, .9);
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
   @include breakpoint(medium) {
     background-color: rgba($black, .9);
     height: 100%;
@@ -132,12 +247,75 @@ h3 {
 }
 
 .allPlayers {
-  @include breakpoint(medium) {
-    background-color: $red;
+  color: white;
+  @include breakpoint(tiny) {
     left: 50%;
+    margin: 15px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  @include breakpoint(small) {
+    left: 50%;
+    margin: 15px;
+    position: absolute;
+    top: 28%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+  @include breakpoint(medium) {
+    left: 50%;
+    margin: 15px;
+    position: absolute;
+    top: 28%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+}
+
+.player {
+  @include breakpoint(medium) {
+    background-color: $black;
+    border: 1px solid $redd;
+    border-radius: 5px;
+    margin: 2px;
+    width: 251px;
+  }
+}
+
+.playerOp {
+  @include breakpoint(medium) {
+    left: 93%;
     padding: 10px;
     position: absolute;
-    top: 40%;
+    top: 73%;
     transform: translate(-50%, -50%);
+    width: 200px;
   }
+}
+
+.dropdown-menu {
+  padding: 5px;
+}
+
+
+
+// Modals ----------------------------------------------------------------------
+.modal {
+  background-color: rgba($gray, .6);
+}
+
+.modal-body {
+  background-color: tint($black, 10%);
+}
+
+.modal-header {
+  background-color: tint($black, 10%);
+  border-bottom: none;
+}
+
+.modal-footer {
+  border-top: none;
+  border: none;
 }

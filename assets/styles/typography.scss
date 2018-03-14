@@ -1,16 +1,130 @@
+// body {
+//   font-family: 'Coda Caption', sans-serif;
+// }
+
+// Landing Section -------------------------------------------------------------
 
 h1 {
+  font-family: 'Coda Caption', sans-serif;
+  text-align: center;
+  color: $white;
+  text-transform: uppercase;
+  @include breakpoint(medium) {
+    font-size: 70px;
+  }
+}
+
+h4 {
+  color: $redd;
+  font-family: 'Coda Caption', sans-serif;
+  font-weight: bold;
+  text-transform: capitalize;
+  @include breakpoint(medium) {
+    font-size: 25px;
+  }
+}
+
+.sign-in-form  {
+  color: $white;
+  font-family: 'Righteous', cursive;
   text-align: center;
 }
 
-p {
-  padding-top: 10px;
+.sign-in-form h5 {
+  color: $white;
+  @include breakpoint(medium) {
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+}
+
+.sign-in-form p {
+  @include breakpoint(medium) {
+    padding-top: 15px;
+    font-size: 15px;
+  }
+}
+
+// User Section ----------------------------------------------------------------
+h2 {
+  color: $white;
+  font-family: 'Coda Caption', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  @include breakpoint(medium) {
+    font-size: 30px;
+  }
+}
+
+h3 {
+  color: $redd;
+  font-family: 'Coda Caption', sans-serif;
+  font-weight: bold;
+  @include breakpoint(medium) {
+    font-size: 40px;
+  }
 }
 
 li {
   list-style-type: none;
 }
 
-.sign-in-form  {
+.user {
   color: $white;
+}
+
+.userOp {
+  font-family: 'Coda Caption', sans-serif;
+  @include breakpoint(medium) {
+    font-size: 20px;
+  }
+}
+
+.dropdown-menu {
+  color: $white;
+}
+
+.new-player {
+  color: $white;
+  font-family: 'Righteous', cursive;
+  @include breakpoint(medium) {
+    font-size: 28px;
+  }
+}
+
+.get-players {
+  color: $white;
+  font-family: 'Righteous', cursive;
+  @include breakpoint(medium) {
+    font-size: 28px;
+  }
+}
+
+// Players section -------------------------------------------------------------
+.player {
+  font-family: 'Righteous', cursive;
+  text-align: center;
+}
+
+.playerOp {
+  font-size: 20px;
+  font-family: 'Coda Caption', sans-serif;
+}
+
+// modals ----------------------------------------------------------------------
+.modal-header {
+  color: $redd;
+  text-transform: uppercase;
+}
+
+.modal-title {
+  font-family: 'Coda Caption', sans-serif;
+  @include breakpoint(medium) {
+    font-size: 28px;
+  }
+}
+
+.modal-body {
+  color: $white;
+  font-family: 'Righteous', cursive;
 }

@@ -6,6 +6,8 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -19,19 +21,20 @@
     <div class="landing"> <!-- Landing -->
 
       <h1>Rank It Up</h1>
+      <h4>Time To Prove who's the best!</h4>
 
       <!-- Sign-in Form ....................................................-->
       <form class="sign-in-form col-md-6 box">
-        <h4>Sign In</h4>
+        <h5>Sign In</h5>
         <div class="form-group">
-          <label for="signInEmail">Email Address</label>
-          <input type="email" class="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
+          <!-- <label for="signInEmail">Email Address</label> -->
+          <input type="email" class="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Email Address" name="credentials[email]">
         </div>
         <div class="form-group">
-          <label for="signInPassword">Password</label>
+          <!-- <label for="signInPassword">Password</label> -->
           <input type="password" class="form-control" id="signInPassword" placeholder="Password" name="credentials[password]">
         </div>
-        <button type="submit" class="btn btn-primary">Sign In</button>
+        <button type="submit" class="sign-btn btn">Sign In</button>
         <br>
         <p>Not a member? <a data-toggle="modal" data-target="#signUp">Sign Up!</a></p>
       </form>
@@ -45,17 +48,20 @@
 
       <!-- Header.................................................... -->
       <div class="menu">
-        <!--Sign-out/Change-password buttons-->
-        <h2>Rank It Up</h2>
-        <div class="userOp dropdown">
-          <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            User Options
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dLabel">
-            <li data-toggle="modal" data-target="#changePassword">Change Password</li>
-            <li id="sign-out" value="Sign Out">Sign Out</li>
-          </ul>
+        <div class="head">
+          <!--Sign-out/Change-password buttons-->
+          <h2>Rank It Up</h2>
+          <div class="userOp dropdown">
+            <a id="dLabel" class="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              User Options
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li data-toggle="modal" data-target="#changePassword">Change Password</li>
+              <li id="sign-out" value="Sign Out">Sign Out</li>
+            </ul>
+          </div>
+
         </div>
 
       <!-- Menu..............................................................-->
@@ -70,19 +76,22 @@
 
       <!-- Players section ==========================================================================================================-->
       <div class="players-section" hidden>
-
-        <h2>Rank It Up</h2>
-        <div class="playerOp dropdown">
-          <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            User Options
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dLabel">
-            <li id="return-menu">Main Menu</li>
-            <li data-toggle="modal" data-target="#changePassword">Change Password</li>
-            <li class="sign-out" value="Sign Out">Sign Out</li>
-          </ul>
+        <div class="head">
+          <h2>Rank It Up</h2>
+          <div class="playerOp dropdown">
+            <a id="dLabel" class="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              User Options
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li id="return-menu">Main Menu</li>
+              <li data-toggle="modal" data-target="#changePassword">Change Password</li>
+              <li class="sign-out" value="Sign Out">Sign Out</li>
+            </ul>
+          </div>
         </div>
+
+        <h3>Players</h3>
 
         <div class="allPlayers">
           <!-- All Players-->
@@ -123,8 +132,8 @@
                   <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm Password" name="credentials[password_confirmation]">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                  <button type="submit" class="modal-btn btn">Submit</button>
                 </div>
               </form>
             </div>
@@ -154,8 +163,8 @@
                   <input type="password" class="form-control" id="newPassword" placeholder="New Password" name="passwords[new]">
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Submit</button>
+                  <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                  <button type="submit" class="modal-btn btn">Submit</button>
                 </div>
               </form>
             </div>
@@ -177,14 +186,14 @@
               <div class="modal-body">
                 <form class="new-player-form">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="NewPlayerName" placeholder="Name" name="player[name]">
+                    <input type="text" class="form-control" id="NewPlayerName" maxlength="25" placeholder="Name" name="player[name]">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="NewPlayerDescription" placeholder="Description" name="player[description]">
+                    <input type="text" class="form-control" id="NewPlayerDescription" maxlength="25" placeholder="Description" name="player[description]">
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="modal-btn btn">Submit</button>
                   </div>
                 </form>
               </div>
@@ -209,10 +218,10 @@
                     <input type="number" class="form-control" id="idUpdate" placeholder="Confirm Player ID" name="player[id]">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="nameUpdate" placeholder="Name" name="player[name]">
+                    <input type="text" class="form-control" id="nameUpdate" maxlength="25" placeholder="Name" name="player[name]">
                   </div>
                   <div class="form-group">
-                    <input type="text" class="form-control" id="descriptionUpdate" placeholder="Description" name="player[description]">
+                    <input type="text" class="form-control" id="descriptionUpdate" maxlength="25" placeholder="Description" name="player[description]">
                   </div>
                   <div class="form-group">
                     <input type="number" class="form-control" id="winsUpdate" placeholder="Wins" name="player[wins]">
@@ -221,8 +230,8 @@
                     <input type="number" class="form-control" id="lossesUpdate" placeholder="Losses" name="player[losses]">
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="modal-btn btn">Submit</button>
                   </div>
                 </form>
               </div>

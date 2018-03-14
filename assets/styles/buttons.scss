@@ -1,9 +1,72 @@
-
 a,
 li {
   cursor: pointer;
 }
 
 li:hover {
-  background: $blue;
+  color: $redd;
+}
+
+// Landing section -------------------------------------------------------------
+.sign-in-form a {
+  color: $gray;
+  @include breakpoint(medium) {
+  }
+}
+
+.sign-in-form a:hover {
+  color: $redd;
+  text-decoration: none;
+  @include breakpoint(medium) {
+  }
+}
+
+.sign-btn {
+  background-color: $black;
+}
+
+.sign-btn:hover {
+  color: $redd;
+}
+
+// User section ----------------------------------------------------------------
+.userOp a:hover,
+.playerOp a:hover,
+.new-player:hover,
+.get-players:hover {
+  color: $redd;
+  text-decoration: none;
+  @include breakpoint(medium) {
+  }
+}
+
+.new-player {
+  @include breakpoint(medium) {
+    height: 100px;
+    width: 500px;
+  }
+}
+
+.get-players {
+  @include breakpoint(medium) {
+    height: 100px;
+    width: 500px;
+  }
+}
+
+// Modals ----------------------------------------------------------------------
+.modal-btn {
+  background-color: $black;
+}
+
+.modal-btn:hover {
+  color: $redd;
+}
+
+.close-btn {
+  background-color: $black;
+}
+
+.close-btn:hover {
+  color: $redd;
 }

@@ -19,7 +19,7 @@ const signUpSuccess = function (data) {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -40,7 +40,7 @@ const signUpFailure = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -67,7 +67,7 @@ const signInSuccess = function (data) {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -88,7 +88,7 @@ const signInFailure = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -110,7 +110,7 @@ const changePasswordSuccess = function (data) {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -131,7 +131,7 @@ const changePasswordFailure = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -153,7 +153,7 @@ const signOutSuccess = function (data) {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
@@ -173,7 +173,7 @@ const signOutFailure = function () {
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
-    loaderBg: '#9EC600', // Background color of the toast loader
+    loaderBg: '#FF0077', // Background color of the toast loader
     beforeShow: function () {}, // will be triggered before the toast is shown
     afterShown: function () {}, // will be triggered after the toat has been shown
     beforeHide: function () {}, // will be triggered before the toast gets hidden
