@@ -41,11 +41,18 @@ const onDeletePlayer = function () {
     .catch(playerUi.deletePlayerFailure)
 }
 
+const onWinsDesc = function () {
+  playerApi.winsDesc()
+    .then()
+    .catch()
+}
+
 const playerHandlers = () => {
   $('.new-player-form').on('submit', onCreatePlayer)
   $('.get-players').on('click', onGetPlayers)
   $('.player-update-form').on('submit', onUpdatePlayer)
   $('.allPlayers').on('click', '.player-delete', onDeletePlayer)
+  $('').on('click', '', onWinsDesc)
 }
 
 module.exports = {

@@ -60,10 +60,22 @@ const deletePlayer = function (id) {
   })
 }
 
+const winsDesc = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/most_wins/',
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createPlayer,
   getPlayers,
   getPlayer,
   updatePlayer,
-  deletePlayer
+  deletePlayer,
+  winsDesc
 }
