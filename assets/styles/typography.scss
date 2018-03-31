@@ -84,15 +84,9 @@ li {
   color: $white;
 }
 
-.new-player {
-  color: $white;
-  font-family: 'Righteous', cursive;
-  @include breakpoint(medium) {
-    font-size: 28px;
-  }
-}
-
-.get-players {
+.new-player,
+.get-players,
+.wins-desc {
   color: $white;
   font-family: 'Righteous', cursive;
   @include breakpoint(medium) {

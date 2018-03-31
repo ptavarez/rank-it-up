@@ -33,21 +33,17 @@ li:hover {
 .userOp a:hover,
 .playerOp a:hover,
 .new-player:hover,
-.get-players:hover {
+.get-players:hover,
+.wins-desc:hover {
   color: $redd;
   text-decoration: none;
   @include breakpoint(medium) {
   }
 }
 
-.new-player {
-  @include breakpoint(medium) {
-    height: 100px;
-    width: 500px;
-  }
-}
-
-.get-players {
+.new-player,
+.get-players,
+.wins-desc {
   @include breakpoint(medium) {
     height: 100px;
     width: 500px;
@@ -56,8 +52,8 @@ li:hover {
 
 // Players section -------------------------------------------------------------
 #player-update-hover:hover {
-  color: $redd;
   background-color: $black;
+  color: $redd;
 }
 
 #player-delete-hover:hover {
