@@ -231,9 +231,10 @@ h3 {
   }
 }
 
-// Players Section -------------------------------------------------------------
+// Players / Standings Section -------------------------------------------------------------
 
-.players-section {
+.players-section,
+.standings-section {
   @include breakpoint(tiny) {
     background-color: rgba($black, .9);
     height: 100%;
@@ -260,16 +261,6 @@ h3 {
     top: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-  }
-}
-
-.playerOp {
-  @include breakpoint(medium) {
-    left: 50%;
-    padding: 10px;
-    position: absolute;
-    top: 8%;
-    transform: translate(-50%, -50%);
   }
 }
 
@@ -301,7 +292,8 @@ h3 {
   }
 }
 
-.player {
+.player,
+.player-by-wins {
   @include breakpoint(medium) {
     background-color: $black;
     border: 1px solid $redd;
@@ -311,21 +303,42 @@ h3 {
   }
 }
 
-.playerOp {
-  @include breakpoint(medium) {
-    left: 93%;
-    padding: 10px;
-    position: absolute;
-    top: 73%;
-    transform: translate(-50%, -50%);
-    width: 200px;
-  }
-}
-
 .dropdown-menu {
   padding: 5px;
 }
 
+
+table {
+  color: white;
+  @include breakpoint(medium) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  font-size: 20px;
+}
+
+th, td {
+  border: 2px solid $white;
+  padding: 10px;
+}
+
+th {
+  background: $redd;
+  color: $black;
+  font-size: 25px;
+}
+
+tr:nth-child(odd) {
+  background: $charcoal;
+}
+
+td a {
+  color: $black;
+  text-decoration: underline;
+}
 
 
 // Modals ----------------------------------------------------------------------

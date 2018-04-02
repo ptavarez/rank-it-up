@@ -53,6 +53,7 @@ const signInSuccess = function (data) {
   $('#signIn').modal('hide')
   $('.landing').hide()
   $('.players-section').hide()
+  $('.standings-section').hide()
   $('.userMain').show()
   $('.menu').show()
   $('.sign-in-form').get(0).reset()
@@ -184,6 +185,7 @@ const signOutFailure = function () {
 const returnMain = function () {
   $('.menu').show()
   $('.players-section').hide()
+  $('.standings-section').hide()
 }
 
 module.exports = {

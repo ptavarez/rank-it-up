@@ -43,7 +43,7 @@ const onDeletePlayer = function () {
 
 const onWinsDesc = function () {
   playerApi.winsDesc()
-    .then()
+    .then(playerUi.getStandings)
     .catch()
 }
 
@@ -52,7 +52,7 @@ const playerHandlers = () => {
   $('.get-players').on('click', onGetPlayers)
   $('.player-update-form').on('submit', onUpdatePlayer)
   $('.allPlayers').on('click', '.player-delete', onDeletePlayer)
-  $('').on('click', '', onWinsDesc)
+  $('.wins-desc').on('click', onWinsDesc)
 }
 
 module.exports = {

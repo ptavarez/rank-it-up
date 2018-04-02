@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Wins</th>
+        <th>Losses</th>
+    </thead>
+    <tbody>
+      {{#each players as |player|}}
+        <tr class="player-by-wins" data-id="{{player.id}}">
+            <td>{{player.name}}</td>
+            <td>{{player.description}}</td>
+            <td>{{player.wins}}</td>
+            <td>{{player.losses}}</td>
+        </tr>
+     {{/each}}
+    </tbody>
+</table>
