@@ -32,7 +32,7 @@
         <h5>Sign In</h5>
         <div class="form-group">
           <!-- <label for="signInEmail">Email Address</label> -->
-          <input type="email" class="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="Email Address" name="credentials[email]">
+          <input type="text" class="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="User Name" name="credentials[email]">
         </div>
         <div class="form-group">
           <!-- <label for="signInPassword">Password</label> -->
@@ -75,7 +75,9 @@
         <!-- Menu buttons-->
         <button type="button" class="new-player btn btn-secondary" data-toggle="modal" data-target="#newPlayer">New Player</button>
         <button type="button" class="get-players btn btn-secondary">View Players</button>
+        <button type="button" class="new-match btn btn-secondary" data-toggle="modal" data-target="#newMatch">New Match</button>
         <button type="button" class="wins-desc btn btn-secondary">Standings</button>
+
 
       </div> <!-- /menu-->
 
@@ -148,8 +150,8 @@
             <div class="modal-body">
               <form class="sign-up-form">
                 <div class="form-group">
-                  <label for="signUpEmail">Email address</label>
-                  <input type="email" class="form-control" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter email" name="credentials[email]">
+                  <label for="signUpEmail">User Name</label>
+                  <input type="text" class="form-control" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter User Name" name="credentials[email]">
                 </div>
                 <div class="form-group">
                   <label for="signUpPassword">Password</label>
@@ -228,6 +230,46 @@
             </div>
           </div>
         </div> <!-- /New Player Modal -->
+
+        <!-- New Match Modal-->
+        <div class="modal fade" id="newMatch" tabindex="-1" role="dialog" aria-labelledby="NewMatchLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="NewMatchLabel">New Match</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="new-match-form">
+                <div class="form-group" id="NewMatchOpposer" name="match[challenger]">
+                  <label for="newMatchChallenger">Select Challenger</label>
+                  <select id="newMatchChallenger" class="form-control">
+                    <option>New Challenger</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="newMatchOpposer">Select Opposer</label>
+                  <select id="newMatchOpposer" class="form-control" name="match[opposer]">
+                    <option>New Opposer</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="newMatchWinner">Winner</label>
+                  <select id="newMatchWinner" class="form-control" name="match[winner]">
+                    <option>Winner</option>
+                  </select>
+                </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="modal-btn btn">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /New Match Modal -->
 
         <!-- Update Modal-->
         <div class="modal fade" id="playerUpdate" tabindex="-1" role="dialog" aria-labelledby="playerUpdateLabel" aria-hidden="true">
