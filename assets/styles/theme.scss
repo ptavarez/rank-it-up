@@ -204,7 +204,7 @@ h3 {
   }
 }
 
-.wins-desc {
+.new-match {
   @include breakpoint(tiny) {
     background-color: $black;
     left: 50%;
@@ -227,6 +227,33 @@ h3 {
     padding: 10px;
     position: absolute;
     top: 70%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.wins-desc {
+  @include breakpoint(tiny) {
+    background-color: $black;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 85%;
+    transform: translate(-50%, -50%);
+  }
+  @include breakpoint(small) {
+    background-color: $black;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 85%;
+    transform: translate(-50%, -50%);
+  }
+  @include breakpoint(medium) {
+    background-color: $black;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 85%;
     transform: translate(-50%, -50%);
   }
 }

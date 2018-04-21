@@ -33,6 +33,7 @@ li:hover {
 .userOp a:hover,
 .new-player:hover,
 .get-players:hover,
+.new-match:hover,
 .wins-desc:hover {
   color: $redd;
   text-decoration: none;
@@ -42,6 +43,7 @@ li:hover {
 
 .new-player,
 .get-players,
+.new-match,
 .wins-desc {
   @include breakpoint(medium) {
     height: 100px;
