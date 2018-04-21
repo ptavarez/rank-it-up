@@ -2,7 +2,7 @@
 
 # EMAIL="" PASSWORD="" sh scripts/auth/sign-in.sh
 
-curl "https://rank-it-up.herokuapp.com/sign-in" \
+curl "http://localhost:4741/sign-in" \
 --include \
 --request POST \
 --header "Content-Type: application/json" \
