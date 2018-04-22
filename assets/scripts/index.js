@@ -4,6 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const authEvents = require('./auth/events.js')
 const playerEvents = require('./players/events.js')
+const matchEvents = require('./matches/events.js')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -15,6 +16,10 @@ $(() => {
 
 $(() => {
   playerEvents.playerHandlers()
+})
+
+$(() => {
+  matchEvents.matchHandlers()
 })
 
 // use require with a reference to bundle the file and use it in this file
