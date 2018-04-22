@@ -54,6 +54,9 @@ h2 {
   @include breakpoint(medium) {
     font-size: 30px;
   }
+  @include breakpoint(tiny) {
+    font-size: 25px;
+  }
 }
 
 h3 {

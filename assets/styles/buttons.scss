@@ -49,6 +49,10 @@ li:hover {
     height: 100px;
     width: 500px;
   }
+  @include breakpoint(tiny) {
+    height: 75px;
+    width: 200px;
+  }
 }
 
 // Players section -------------------------------------------------------------

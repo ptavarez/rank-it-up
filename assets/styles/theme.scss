@@ -13,6 +13,14 @@ h1 {
     transform: translate(-50%, -50%);
     width: 40%;
   }
+  @include breakpoint(tiny) {
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+  }
 }
 
 h4 {
@@ -22,6 +30,13 @@ h4 {
     position: absolute;
     top: 25%;
     transform: translate(-50%, -50%);
+  }
+  @include breakpoint(tiny) {
+    left: 60%;
+    position: absolute;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    width: 100%;
   }
 }
 
@@ -37,16 +52,27 @@ h4 {
     position: absolute;
     right: 0;
   }
+  @include breakpoint(tiny) {
+    background: url('https://i.imgur.com/D1Qiwk9.jpg') no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
 }
 
 .sign-in-form {
   @include breakpoint(tiny) {
-    // background-color: rgba($black, .4);
+    background-color: rgba($redd, .4);
     border-radius: 15px;
     left: 50%;
     padding: 20px;
     position: absolute;
-    top: 59.90%;
+    top: 60%;
     transform: translate(-50%, -50%);
     width: 90%;
   }
@@ -81,12 +107,12 @@ h4 {
 
 // User Section ----------------------------------------------------------------
 .head {
-    background-color: $black;
-    background-size: cover;
-    height: 10%;
-    left: 0;
-    position: absolute;
-    right: 0;
+  background-color: $black;
+  background-size: cover;
+  height: 10%;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 
 .userMain {
@@ -101,6 +127,18 @@ h4 {
     position: absolute;
     right: 0;
   }
+  @include breakpoint(tiny) {
+    background: url('https://i.imgur.com/WCQxz7H.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+
 }
 
 .menu {
@@ -113,11 +151,35 @@ h4 {
     transform: translate(-50%, -50%);
     width: 100%;
   }
+  @include breakpoint(tiny) {
+    background-color: rgba($black, .7);
+    height: 100%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
+
 }
 
 h2 {
   @include breakpoint(medium) {
-    left: 10%;
+    left: 15%;
+    padding: 10px;
+    position: absolute;
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+  @include breakpoint(small) {
+    left: 15%;
+    padding: 10px;
+    position: absolute;
+    top: 20%;
+    transform: translate(-50%, -50%);
+  }
+  @include breakpoint(tiny) {
+    left: 23%;
     padding: 10px;
     position: absolute;
     top: 20%;
@@ -131,6 +193,14 @@ h2 {
     padding: 10px;
     position: absolute;
     top: 73%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+  }
+  @include breakpoint(tiny) {
+    left: 85%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
     transform: translate(-50%, -50%);
     width: 200px;
   }
@@ -156,7 +226,7 @@ h3 {
     left: 50%;
     padding: 10px;
     position: absolute;
-    top: 40%;
+    top: 20%;
     transform: translate(-50%, -50%);
   }
   @include breakpoint(small) {
@@ -183,7 +253,7 @@ h3 {
     left: 50%;
     padding: 10px;
     position: absolute;
-    top: 55%;
+    top: 35%;
     transform: translate(-50%, -50%);
   }
   @include breakpoint(small) {
@@ -210,7 +280,7 @@ h3 {
     left: 50%;
     padding: 10px;
     position: absolute;
-    top: 70%;
+    top: 50%;
     transform: translate(-50%, -50%);
   }
   @include breakpoint(small) {
@@ -237,7 +307,7 @@ h3 {
     left: 50%;
     padding: 10px;
     position: absolute;
-    top: 85%;
+    top: 65%;
     transform: translate(-50%, -50%);
   }
   @include breakpoint(small) {
@@ -294,10 +364,10 @@ h3 {
 .allPlayers {
   color: white;
   @include breakpoint(tiny) {
-    left: 50%;
+    left: 65%;
     margin: 15px;
     position: relative;
-    top: 50%;
+    top: 35%;
     transform: translate(-50%, -50%);
     width: 100%;
   }
@@ -328,6 +398,20 @@ h3 {
     margin: 2px;
     width: 251px;
   }
+  @include breakpoint(small) {
+    background-color: $black;
+    border: 1px solid $redd;
+    border-radius: 5px;
+    margin: 2px;
+    width: 251px;
+  }
+  @include breakpoint(tiny) {
+    background-color: $black;
+    border: 1px solid $redd;
+    border-radius: 5px;
+    margin: 2px;
+    width: 251px;
+  }
 }
 
 .dropdown-menu {
@@ -338,13 +422,21 @@ h3 {
 table {
   color: white;
   @include breakpoint(medium) {
+    font-size: 25px;
     left: 50%;
     padding: 10px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
   }
-  font-size: 20px;
+  @include breakpoint(tiny) {
+    font-size: 15px;
+    left: 50%;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 th, td {
@@ -356,6 +448,9 @@ th {
   background: $redd;
   color: $black;
   font-size: 25px;
+  @include breakpoint(tiny) {
+    font-size: 20px;
+  }
 }
 
 tr:nth-child(odd) {
