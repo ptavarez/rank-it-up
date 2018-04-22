@@ -75,7 +75,7 @@
         <!-- Menu buttons-->
         <button type="button" class="new-player btn btn-secondary" data-toggle="modal" data-target="#newPlayer">New Player</button>
         <button type="button" class="get-players btn btn-secondary">View Players</button>
-        <button type="button" class="new-match btn btn-secondary" data-toggle="modal" data-target="#newMatch">New Match</button>
+        <button type="button" class="new-match btn btn-secondary" data-toggle="modal" data-target="#comingSoon">New Match</button>
         <button type="button" class="wins-desc btn btn-secondary">Standings</button>
 
 
@@ -243,22 +243,64 @@
               </div>
               <div class="modal-body">
                 <form class="new-match-form">
-                <div class="form-group" id="NewMatchOpposer" name="match[challenger]">
+                  <div class="form-group">
+                    <label for="newMatchDescription">Description</label>
+                    <input type="text" class="form-control" id="newMatchDescription" placeholder="Description" name="match[description]">
+                  </div>
+                <div class="form-group">
                   <label for="newMatchChallenger">Select Challenger</label>
-                  <select id="newMatchChallenger" class="form-control">
+                  <select id="newMatchChallenger" class="form-control" name="match[challenger]">
                     <option>New Challenger</option>
+                    <option>Anthony</option>
+                    <option>Boogie</option>
+                    <option>DRO</option>
+                    <option>Edwin</option>
+                    <option>Gabriel</option>
+                    <option>JC</option>
+                    <option>Renee</option>
+                    <option>Tyrone</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="newMatchOpposer">Select Opposer</label>
-                  <select id="newMatchOpposer" class="form-control" name="match[opposer]">
+                  <select id="newMatchOpposer" class="form-control" name="match[opponent]">
                     <option>New Opposer</option>
+                    <option>Anthony</option>
+                    <option>Boogie</option>
+                    <option>DRO</option>
+                    <option>Edwin</option>
+                    <option>Gabriel</option>
+                    <option>JC</option>
+                    <option>Renee</option>
+                    <option>Tyrone</option>
                   </select>
                 </div>
                 <div class="form-group">
                   <label for="newMatchWinner">Winner</label>
                   <select id="newMatchWinner" class="form-control" name="match[winner]">
                     <option>Winner</option>
+                    <option>Anthony</option>
+                    <option>Boogie</option>
+                    <option>DRO</option>
+                    <option>Edwin</option>
+                    <option>Gabriel</option>
+                    <option>JC</option>
+                    <option>Renee</option>
+                    <option>Tyrone</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="newMatchWinner">Loser</label>
+                  <select id="newMatchLoser" class="form-control" name="match[loser]">
+                    <option>Loser</option>
+                    <option>Anthony</option>
+                    <option>Boogie</option>
+                    <option>DRO</option>
+                    <option>Edwin</option>
+                    <option>Gabriel</option>
+                    <option>JC</option>
+                    <option>Renee</option>
+                    <option>Tyrone</option>
                   </select>
                 </div>
                   <div class="modal-footer">
@@ -271,7 +313,7 @@
           </div>
         </div> <!-- /New Match Modal -->
 
-        <!-- Update Modal-->
+        <!-- Player Update Modal-->
         <div class="modal fade" id="playerUpdate" tabindex="-1" role="dialog" aria-labelledby="playerUpdateLabel" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -305,10 +347,27 @@
                   </div>
                 </form>
               </div>
-
             </div>
           </div>
         </div> <!-- /Player Update Modal -->
+
+        <!-- Coming Soon Modal-->
+        <div class="modal fade" id="comingSoon" tabindex="-1" role="dialog" aria-labelledby="CominLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="comingSoonLabel">Coming Soon</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <p>Feature Is In The Works</p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /Coming Soon Modal -->
 
     </body>
 
