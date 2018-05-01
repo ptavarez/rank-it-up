@@ -5,6 +5,8 @@ require('../../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
 
 const listChallengersTemplate = require('../templates/challenger-dropdown.handlebars')
 const listOpposersTemplate = require('../templates/opposer-dropdown.handlebars')
+const listWinnersTemplate = require('../templates/winner-dropdown.handlebars')
+const listLosersTemplate = require('../templates/loser-dropdown.handlebars')
 
 const createMatchSuccess = function (data) {
   $('#newMatch').modal('hide')
@@ -73,8 +75,15 @@ const listPlayersSuccess = function (data) {
   } else {
     const listChallengers = listChallengersTemplate({ players: data.players })
     $('#newMatchChallenger').html(listChallengers)
-    const listOpposer = listOpposersTemplate({ players: data.players })
-    $('#newMatchOpposer').html(listOpposer)
+
+    const listOpposers = listOpposersTemplate({ players: data.players })
+    $('#newMatchOpposer').html(listOpposers)
+
+    const listWinners = listWinnersTemplate({ players: data.players })
+    $('#newMatchWinner').html(listWinners)
+
+    const listLosers = listLosersTemplate({ players: data.players })
+    $('#newMatchLoser').html(listLosers)
   }
 }
 
