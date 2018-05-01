@@ -15,7 +15,7 @@ const signUpSuccess = function (data) {
     allowToastClose: true, // Boolean value true or false
     hideAfter: 3000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
     stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-    position: 'bottom-left', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+    position: 'top-center', // top-center or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
@@ -36,7 +36,7 @@ const signUpFailure = function () {
     allowToastClose: true, // Boolean value true or false
     hideAfter: 4000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
     stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-    position: 'bottom-left', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+    position: 'top-center', // top-center or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
@@ -64,7 +64,7 @@ const signInSuccess = function (data) {
     allowToastClose: true, // Boolean value true or false
     hideAfter: 3000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
     stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-    position: 'bottom-left', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+    position: 'top-center', // top-center or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
@@ -85,7 +85,7 @@ const signInFailure = function () {
     allowToastClose: true, // Boolean value true or false
     hideAfter: 4000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
     stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-    position: 'bottom-left', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+    position: 'top-center', // top-center or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
@@ -107,7 +107,7 @@ const changePasswordSuccess = function (data) {
     allowToastClose: true, // Boolean value true or false
     hideAfter: 3000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
     stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-    position: 'bottom-left', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+    position: 'top-center', // top-center or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
@@ -128,7 +128,7 @@ const changePasswordFailure = function () {
     allowToastClose: true, // Boolean value true or false
     hideAfter: 4000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
     stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-    position: 'bottom-left', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+    position: 'top-center', // top-center or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
@@ -150,7 +150,7 @@ const signOutSuccess = function (data) {
     allowToastClose: true, // Boolean value true or false
     hideAfter: 3000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
     stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-    position: 'bottom-left', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+    position: 'top-center', // top-center or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default
@@ -170,7 +170,7 @@ const signOutFailure = function () {
     allowToastClose: true, // Boolean value true or false
     hideAfter: 4000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
     stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
-    position: 'bottom-left', // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+    position: 'top-center', // top-center or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
 
     textAlign: 'left', // Text alignment i.e. left, right or center
     loader: true, // Whether to show loader or not. True by default

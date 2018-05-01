@@ -1,0 +1,9 @@
+<option selected disabled>Loser</option>
+
+{{#each players as |player|}}
+
+  <option data-id="{{player.id}}">
+    {{player.name}}
+  </option>
+
+{{/each}}
