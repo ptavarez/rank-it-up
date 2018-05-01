@@ -81,6 +81,9 @@ li {
   @include breakpoint(medium) {
     font-size: 20px;
   }
+  @include breakpoint(tiny) {
+    font-size: 15px;
+  }
 }
 
 .dropdown-menu {
