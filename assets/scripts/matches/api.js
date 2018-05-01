@@ -60,10 +60,22 @@ const deleteMatch = function (id) {
   })
 }
 
+const listPlayers = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/players/',
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createMatch,
   getMatches,
   getMatch,
   updateMatch,
-  deleteMatch
+  deleteMatch,
+  listPlayers
 }

@@ -41,11 +41,18 @@ const onDeleteMatch = function () {
     .catch(matchUi.deleteMatchFailure)
 }
 
+const onListPlayers = function (event) {
+  matchApi.listPlayers()
+    .then(matchUi.listPlayersSuccess)
+    .catch(matchUi.listPlayersFailure)
+}
+
 const matchHandlers = () => {
   $('.new-match-form').on('submit', onCreateMatch)
   $('.get-matches').on('click', onGetMatches)
   $('.match-update-form').on('submit', onUpdateMatch)
   $('.allMatches').on('click', '.match-delete', onDeleteMatch)
+  $('.new-match').on('click', onListPlayers)
 }
 
 module.exports = {
