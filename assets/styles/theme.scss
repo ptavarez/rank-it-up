@@ -383,7 +383,7 @@ h3 {
 table {
   color: white;
   @include breakpoint(medium) {
-    font-size: 25px;
+    font-size: 20px;
     left: 50%;
     padding: 10px;
     position: absolute;
@@ -416,7 +416,7 @@ th, td {
 th {
   background: $redd;
   color: $black;
-  font-size: 25px;
+  font-size: 20px;
   @include breakpoint(tiny) {
     font-size: 20px;
   }
