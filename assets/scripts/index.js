@@ -22,8 +22,9 @@ $(() => {
   matchEvents.matchHandlers()
 })
 
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
+const $body = $('body')
 
-// use require without a reference to ensure a file is bundled
-// require('./example')
+$(document).on({
+  ajaxStart: function () { $body.addClass('loading') },
+  ajaxStop: function () { $body.removeClass('loading') }
+})
