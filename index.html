@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Rank It Up</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+    </head>
+
+    <body class="container-fluid">
+
+<!-- Landing Section =================================================================================================-->
+
+    <div class="landing"> <!-- Landing -->
+
+      <h1>Rank It Up</h1>
+      <h4>Time To Prove who's the best!</h4>
+
+      <!-- Sign-in Form ....................................................-->
+      <form class="sign-in-form col-md-6 box">
+        <h5>Sign In</h5>
+        <div class="form-group">
+          <!-- <label for="signInEmail">Email Address</label> -->
+          <input type="text" class="form-control" id="signInEmail" aria-describedby="emailHelp" placeholder="User Name" name="credentials[email]">
+        </div>
+        <div class="form-group">
+          <!-- <label for="signInPassword">Password</label> -->
+          <input type="password" class="form-control" id="signInPassword" placeholder="Password" name="credentials[password]">
+        </div>
+        <button type="submit" class="sign-btn btn">Sign In</button>
+        <br>
+        <p>Not a member? <a data-toggle="modal" data-target="#signUp">Sign Up!</a></p>
+      </form>
+
+    </div> <!-- /Landing -->
+
+
+<!-- User Section =================================================================================================-->
+
+    <div class="userMain" hidden> <!-- userMain -->
+
+      <!-- Header.................................................... -->
+      <div class="menu">
+        <div class="head">
+          <!--Sign-out/Change-password buttons-->
+          <h2>Rank It Up</h2>
+          <div class="userOp dropdown">
+            <a id="dLabel" class="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              User Options
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li data-toggle="modal" data-target="#changePassword">Change Password</li>
+              <li id="sign-out" value="Sign Out">Sign Out</li>
+            </ul>
+          </div>
+
+        </div>
+
+      <!-- Menu..............................................................-->
+
+
+        <h3>Main Menu</h3>
+        <!-- Menu buttons-->
+        <button type="button" class="new-player btn btn-secondary" data-toggle="modal" data-target="#newPlayer">New Player</button>
+        <button type="button" class="get-players btn btn-secondary">View Players</button>
+        <button type="button" class="new-match btn btn-secondary" data-toggle="modal" data-target="#newMatch">New Match</button>
+        <button type="button" class="wins-desc btn btn-secondary">Standings</button>
+
+
+      </div> <!-- /menu-->
+
+      <!-- Players section ==========================================================================================================-->
+      <div class="players-section" hidden>
+        <div class="head">
+          <h2>Rank It Up</h2>
+          <div class="userOp dropdown">
+            <a id="dLabel" class="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              User Options
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li class="return-menu">Main Menu</li>
+              <li data-toggle="modal" data-target="#changePassword">Change Password</li>
+              <li class="sign-out" value="Sign Out">Sign Out</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Players</h3>
+
+        <div class="allPlayers">
+          <!-- All Players-->
+        </div>
+
+      </div>
+
+      <!-- Standings section ==========================================================================================================-->
+      <div class="standings-section" hidden>
+        <div class="head">
+          <h2>Rank It Up</h2>
+          <div class="userOp dropdown">
+            <a id="dLabel" class="user" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              User Options
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              <li class="return-menu">Main Menu</li>
+              <li data-toggle="modal" data-target="#changePassword">Change Password</li>
+              <li class="sign-out" value="Sign Out">Sign Out</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3>Standings</h3>
+
+        <div class="standings">
+          <!-- All Standings-->
+        </div>
+
+      </div>
+
+    </div> <!-- /userMain -->
+
+<!-- Modals=========================================================================================================================-->
+
+
+        <!-- Sign-up Modal ....................................................-->
+        <div class="modal fade" id="signUp" tabindex="-1" role="dialog" aria-labelledby="signUpLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signUpLabel">Sign Up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <form class="sign-up-form">
+                <div class="form-group">
+                  <label for="signUpEmail">User Name</label>
+                  <input type="text" class="form-control" id="signUpEmail" aria-describedby="emailHelp" placeholder="Enter User Name" name="credentials[email]">
+                </div>
+                <div class="form-group">
+                  <label for="signUpPassword">Password</label>
+                  <input type="password" class="form-control" id="signUpPassword" placeholder="Password" name="credentials[password]">
+                </div>
+                <div class="form-group">
+                  <label for="signUpConfirmPassword">Confirm Password</label>
+                  <input type="password" class="form-control" id="signUpConfirmPassword" placeholder="Confirm Password" name="credentials[password_confirmation]">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                  <button type="submit" class="modal-btn btn">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /Sign-up Modal -->
+
+        <!-- Change-password Modal -->
+        <div class="modal fade" id="changePassword" tabindex="-1" role="dialog" aria-labelledby="changePasswordLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="changePasswordLabel">Change Password</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+
+            <div class="modal-body">
+              <form class="change-password-form">
+                <div class="form-group">
+                  <label for="changePassword">Old Password</label>
+                  <input type="password" class="form-control" id="oldPassword" placeholder="Old Password" name="passwords[old]">
+                </div>
+                <div class="form-group">
+                  <label for="changePassword">Password</label>
+                  <input type="password" class="form-control" id="newPassword" placeholder="New Password" name="passwords[new]">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                  <button type="submit" class="modal-btn btn">Submit</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /Change-password Modal -->
+
+        <!-- New player Modal-->
+        <div class="modal fade" id="newPlayer" tabindex="-1" role="dialog" aria-labelledby="NewPlayerLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="NewPlayerLabel">New Player</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <form class="new-player-form">
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="NewPlayerName" maxlength="15" placeholder="Name" name="player[name]">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="NewPlayerDescription" maxlength="25" placeholder="Description" name="player[description]">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="modal-btn btn">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /New Player Modal -->
+
+        <!-- New Match Modal-->
+        <div class="modal fade" id="newMatch" tabindex="-1" role="dialog" aria-labelledby="NewMatchLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="NewMatchLabel">New Match</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="new-match-form">
+                  <div class="form-group">
+                    <label for="newMatchDescription">Description</label>
+                    <input type="text" class="form-control" id="newMatchDescription" placeholder="Description" name="match[description]">
+                  </div>
+                <div class="form-group">
+                  <label for="newMatchChallenger">Select Challenger</label>
+                  <select id="newMatchChallenger" class="form-control" name="match[challenger]">
+                    <option>Challenger</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="newMatchOpposer">Select Opposer</label>
+                  <select id="newMatchOpposer" class="form-control" name="match[opponent]" >
+                    <option>Opposer</option>
+                  </select>
+                </div>
+                <!-- <div class="form-group">
+                  <label for="newMatchWinner">Winner</label>
+                  <select id="newMatchWinner" class="form-control" name="match[winner]">
+                    <option>Winner</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="newMatchWinner">Loser</label>
+                  <select id="newMatchLoser" class="form-control" name="match[loser]">
+                    <option>Loser</option>
+                  </select>
+                </div> -->
+                  <div class="modal-footer">
+                    <p>
+                      (Note: This feature is currently a work in progress)
+                    </p>
+                    <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="modal-btn btn">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /New Match Modal -->
+
+        <!-- Player Update Modal-->
+        <div class="modal fade" id="playerUpdate" tabindex="-1" role="dialog" aria-labelledby="playerUpdateLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="playerUpdateLabel">Player Update</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="player-update modal-body">
+                <form class="player-update-form">
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="idUpdate" placeholder="Confirm Player ID" name="player[id]">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="nameUpdate" maxlength="25" placeholder="Name" name="player[name]">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" id="descriptionUpdate" maxlength="25" placeholder="Description" name="player[description]">
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="winsUpdate" placeholder="Wins" name="player[wins]">
+                  </div>
+                  <div class="form-group">
+                    <input type="number" class="form-control" id="lossesUpdate" placeholder="Losses" name="player[losses]">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="close-btn btn" data-dismiss="modal">Close</button>
+                    <button type="submit" class="modal-btn btn">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /Player Update Modal -->
+
+        <!-- Coming Soon Modal-->
+        <div class="modal fade" id="comingSoon" tabindex="-1" role="dialog" aria-labelledby="CominLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="comingSoonLabel">Coming Soon</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <p>Feature Is In The Works</p>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /Coming Soon Modal -->
+
+        <!-- Load modal-->
+        <div class="load-modal"></div>
+
+    </body>
+
+</html>
